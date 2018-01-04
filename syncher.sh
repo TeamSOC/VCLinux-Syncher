@@ -493,6 +493,10 @@ Traverse 0 0 "FindNeccesaries"
 
 Traverse 0 0 "PrintTree"
 
+# arguments)
+##  $1: SVN Address
+##  $2: ID
+##  $3: Password
 function Commit()
 {
     EXEC_PWD=`pwd`
@@ -504,9 +508,9 @@ function Commit()
 
 function ShowIncludePathVS()
 {
-    #RELATIVE_PATH_ROOT="\$(SolutionDir)TOS_INCLUDE_PATH/"
+    #RELATIVE_PATH_ROOT="\$(SolutionDir)/"
     # instead:
-    DIR_NAMES[$FOUND_ROOT]="\$\(SolutionDir\)TOS_INCLUDE_PATH"
+    DIR_NAMES[$FOUND_ROOT]="\$\(SolutionDir\)""$1"
 
 
     ARGS_PRINT_REL_PATH=( "REL_PATH_LIST" )
